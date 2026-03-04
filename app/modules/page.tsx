@@ -104,7 +104,7 @@ export default function ModulesPage() {
               <div className={`w-full h-full relative preserve-3d transition-transform duration-1000 lg:group-hover:rotate-y-180 ${flippedCard === 1 ? 'rotate-y-180' : ''}`}>
 
                 {/* FRONT */}
-                <div className="absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-white/[0.05] shadow-[0_0_40px_rgba(255,255,255,0.02)]">
+                <div className={`absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-white/[0.05] shadow-[0_0_40px_rgba(255,255,255,0.02)] ${flippedCard === 1 ? 'pointer-events-none lg:pointer-events-auto' : ''}`}>
                   <div className="absolute inset-0 z-0 bg-[#050505]">
                     <Image
                       src="/professional-financial-trading-team-meeting-in-mod.jpg"
@@ -132,7 +132,7 @@ export default function ModulesPage() {
                 </div>
 
                 {/* BACK */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden flex flex-col border border-blue-500/30 bg-[#050505]/90 backdrop-blur-2xl shadow-[0_0_50px_rgba(59,130,246,0.15)]">
+                <div className={`absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden flex flex-col border border-blue-500/30 bg-[#050505]/90 backdrop-blur-2xl shadow-[0_0_50px_rgba(59,130,246,0.15)] ${flippedCard !== 1 ? 'pointer-events-none lg:pointer-events-auto' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-50 pointer-events-none" />
                   <div className="relative z-10 p-6 md:p-8 flex flex-col h-full justify-center">
                     <h3 className="text-2xl font-black text-white mb-6 tracking-tight text-center">Self Trading Features</h3>
@@ -154,7 +154,7 @@ export default function ModulesPage() {
                         <p><strong className="text-white">Support System:</strong> Education courses, counseling, copy trading, and algorithmic trading assistance provided.</p>
                       </li>
                     </ul>
-                    <button onClick={() => setFlippedCard(null)} className="lg:hidden mt-6 w-full py-3 rounded-full border border-blue-500/20 bg-blue-500/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Go Back</button>
+                    <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFlippedCard(null); }} className="relative z-50 lg:hidden mt-6 w-full py-3 rounded-full border border-blue-500/20 bg-blue-500/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Go Back</button>
                   </div>
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function ModulesPage() {
               <div className={`w-full h-full relative preserve-3d transition-transform duration-1000 lg:group-hover:rotate-y-180 ${flippedCard === 2 ? 'rotate-y-180' : ''}`}>
 
                 {/* FRONT */}
-                <div className="absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-[#BF953F]/40 shadow-[0_0_40px_rgba(191,149,63,0.15)]">
+                <div className={`absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-[#BF953F]/40 shadow-[0_0_40px_rgba(191,149,63,0.15)] ${flippedCard === 2 ? 'pointer-events-none lg:pointer-events-auto' : ''}`}>
                   <div className="absolute inset-0 z-0 bg-[#020202]">
                     <Image
                       src="/professional-trading-dashboard-with-charts-and-ana.jpg"
@@ -199,7 +199,7 @@ export default function ModulesPage() {
                 </div>
 
                 {/* BACK */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden flex flex-col border border-[#BF953F]/80 bg-[#050505]/95 backdrop-blur-2xl shadow-[0_20px_80px_-15px_rgba(191,149,63,0.4)]">
+                <div className={`absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden flex flex-col border border-[#BF953F]/80 bg-[#050505]/95 backdrop-blur-2xl shadow-[0_20px_80px_-15px_rgba(191,149,63,0.4)] ${flippedCard !== 2 ? 'pointer-events-none lg:pointer-events-auto' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-br from-[#BF953F]/10 to-transparent opacity-100 pointer-events-none" />
                   <div className="relative z-10 p-6 md:p-8 flex flex-col h-full justify-center">
                     <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] to-[#FCF6BA] mb-6 tracking-tight text-center">Profit Sharing Details</h3>
@@ -225,7 +225,7 @@ export default function ModulesPage() {
                         <p><strong className="text-white">Withdrawal:</strong> Withdraw anytime (requires minimum 40-day notice).</p>
                       </li>
                     </ul>
-                    <button onClick={() => setFlippedCard(null)} className="lg:hidden mt-6 w-full py-3 rounded-full border border-[#BF953F]/40 bg-[#BF953F]/20 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-[#FCF6BA] active:scale-95 transition-all">Go Back</button>
+                    <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFlippedCard(null); }} className="relative z-50 lg:hidden mt-6 w-full py-3 rounded-full border border-[#BF953F]/40 bg-[#BF953F]/20 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-[#FCF6BA] active:scale-95 transition-all">Go Back</button>
                   </div>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export default function ModulesPage() {
               <div className={`w-full h-full relative preserve-3d transition-transform duration-1000 lg:group-hover:rotate-y-180 ${flippedCard === 3 ? 'rotate-y-180' : ''}`}>
 
                 {/* FRONT */}
-                <div className="absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-white/[0.05] shadow-[0_0_40px_rgba(255,255,255,0.02)]">
+                <div className={`absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-white/[0.05] shadow-[0_0_40px_rgba(255,255,255,0.02)] ${flippedCard === 3 ? 'pointer-events-none lg:pointer-events-auto' : ''}`}>
                   <div className="absolute inset-0 z-0 bg-[#050505]">
                     <Image
                       src="/modern-financial-trading-office-with-multiple-moni.jpg"
@@ -269,7 +269,7 @@ export default function ModulesPage() {
                 </div>
 
                 {/* BACK */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden flex flex-col border border-purple-500/30 bg-[#050505]/95 backdrop-blur-2xl shadow-[0_0_50px_rgba(168,85,247,0.15)]">
+                <div className={`absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden flex flex-col border border-purple-500/30 bg-[#050505]/95 backdrop-blur-2xl shadow-[0_0_50px_rgba(168,85,247,0.15)] ${flippedCard !== 3 ? 'pointer-events-none lg:pointer-events-auto' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-50 pointer-events-none" />
                   <div className="relative z-10 p-6 md:p-8 flex flex-col h-full justify-center">
                     <h3 className="text-2xl font-black text-purple-200 mb-6 tracking-tight text-center">GreenTik Packages</h3>
@@ -291,7 +291,7 @@ export default function ModulesPage() {
                         <p><strong className="text-white">Value Add:</strong> Includes complimentary educational course access for each package.</p>
                       </li>
                     </ul>
-                    <button onClick={() => setFlippedCard(null)} className="lg:hidden mt-6 w-full py-3 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Go Back</button>
+                    <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFlippedCard(null); }} className="relative z-50 lg:hidden mt-6 w-full py-3 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Go Back</button>
                   </div>
                 </div>
               </div>

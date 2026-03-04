@@ -11,6 +11,8 @@ import { ProfitSharingCalculator } from "@/components/profit-sharing-calculator"
 import { FixedReturnCalculator } from "@/components/fixed-return-calculator"
 
 export default function ModulesPage() {
+  const [flippedCard, setFlippedCard] = useState<number | null>(null)
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -99,7 +101,7 @@ export default function ModulesPage() {
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="group relative h-[480px] perspective-1000"
             >
-              <div className="w-full h-full relative preserve-3d transition-transform duration-1000 group-hover:rotate-y-180">
+              <div className={`w-full h-full relative preserve-3d transition-transform duration-1000 lg:group-hover:rotate-y-180 ${flippedCard === 1 ? 'rotate-y-180' : ''}`}>
 
                 {/* FRONT */}
                 <div className="absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-white/[0.05] shadow-[0_0_40px_rgba(255,255,255,0.02)]">
@@ -117,16 +119,14 @@ export default function ModulesPage() {
                   <div className="relative z-10 p-6 md:p-8 flex flex-col h-full">
                     <div className="flex justify-between items-start mb-auto">
                       <div className="px-4 py-2 rounded-full bg-[#020202]/60 backdrop-blur-xl border border-white/10 flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
+                        <span className="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,247,0.8)]" />
                         <span className="text-white/90 text-[10px] uppercase tracking-widest font-black">Module 01</span>
-                      </div>
-                      <div className="w-10 h-10 rounded-full bg-[#020202]/60 backdrop-blur-xl border border-white/10 flex items-center justify-center animate-pulse">
-                        <svg className="w-4 h-4 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-8.4L21.5 8" /></svg>
                       </div>
                     </div>
                     <div className="mt-auto relative z-10 w-full text-center pb-4">
                       <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-2 text-shadow-lg">Self Trading</h3>
-                      <p className="text-white/60 text-sm tracking-widest uppercase font-bold">Hover to explore</p>
+                      <p className="text-white/60 text-sm tracking-widest uppercase font-bold hidden lg:block">Hover to explore</p>
+                      <button onClick={() => setFlippedCard(flippedCard === 1 ? null : 1)} className="lg:hidden mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Tap to explore</button>
                     </div>
                   </div>
                 </div>
@@ -154,6 +154,7 @@ export default function ModulesPage() {
                         <p><strong className="text-white">Support System:</strong> Education courses, counseling, copy trading, and algorithmic trading assistance provided.</p>
                       </li>
                     </ul>
+                    <button onClick={() => setFlippedCard(null)} className="lg:hidden mt-6 w-full py-3 rounded-full border border-blue-500/20 bg-blue-500/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Go Back</button>
                   </div>
                 </div>
               </div>
@@ -167,7 +168,7 @@ export default function ModulesPage() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="relative group h-[480px] perspective-1000 md:-translate-y-8 z-10"
             >
-              <div className="w-full h-full relative preserve-3d transition-transform duration-1000 group-hover:rotate-y-180">
+              <div className={`w-full h-full relative preserve-3d transition-transform duration-1000 lg:group-hover:rotate-y-180 ${flippedCard === 2 ? 'rotate-y-180' : ''}`}>
 
                 {/* FRONT */}
                 <div className="absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-[#BF953F]/40 shadow-[0_0_40px_rgba(191,149,63,0.15)]">
@@ -188,13 +189,11 @@ export default function ModulesPage() {
                         <Star className="w-3 h-3 text-[#FCF6BA] fill-[#FCF6BA]" />
                         <span className="text-[#FCF6BA] text-[10px] uppercase tracking-widest font-black">Module 02</span>
                       </div>
-                      <div className="w-10 h-10 rounded-full bg-[#BF953F]/10 backdrop-blur-xl border border-[#BF953F]/40 flex items-center justify-center animate-pulse">
-                        <svg className="w-4 h-4 text-[#FCF6BA]/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-8.4L21.5 8" /></svg>
-                      </div>
                     </div>
                     <div className="mt-auto relative z-10 w-full text-center pb-4">
                       <h3 className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#BF953F] tracking-tight mb-2 drop-shadow-lg">Profit Sharing</h3>
-                      <p className="text-[#FCF6BA]/60 text-sm tracking-widest uppercase font-bold">Recommended &middot; Hover</p>
+                      <p className="text-[#FCF6BA]/60 text-sm tracking-widest uppercase font-bold hidden lg:block">Recommended &middot; Hover</p>
+                      <button onClick={() => setFlippedCard(flippedCard === 2 ? null : 2)} className="lg:hidden mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#BF953F]/50 bg-[#BF953F]/20 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-[#FCF6BA] active:scale-95 transition-all">Tap to explore</button>
                     </div>
                   </div>
                 </div>
@@ -226,6 +225,7 @@ export default function ModulesPage() {
                         <p><strong className="text-white">Withdrawal:</strong> Withdraw anytime (requires minimum 40-day notice).</p>
                       </li>
                     </ul>
+                    <button onClick={() => setFlippedCard(null)} className="lg:hidden mt-6 w-full py-3 rounded-full border border-[#BF953F]/40 bg-[#BF953F]/20 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-[#FCF6BA] active:scale-95 transition-all">Go Back</button>
                   </div>
                 </div>
               </div>
@@ -239,7 +239,7 @@ export default function ModulesPage() {
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="group relative h-[480px] perspective-1000"
             >
-              <div className="w-full h-full relative preserve-3d transition-transform duration-1000 group-hover:rotate-y-180">
+              <div className={`w-full h-full relative preserve-3d transition-transform duration-1000 lg:group-hover:rotate-y-180 ${flippedCard === 3 ? 'rotate-y-180' : ''}`}>
 
                 {/* FRONT */}
                 <div className="absolute inset-0 backface-hidden rounded-[2.5rem] overflow-hidden flex flex-col border border-white/[0.05] shadow-[0_0_40px_rgba(255,255,255,0.02)]">
@@ -259,13 +259,11 @@ export default function ModulesPage() {
                         <span className="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)]" />
                         <span className="text-white/90 text-[10px] uppercase tracking-widest font-black">Module 03</span>
                       </div>
-                      <div className="w-10 h-10 rounded-full bg-[#020202]/60 backdrop-blur-xl border border-white/10 flex items-center justify-center animate-pulse">
-                        <svg className="w-4 h-4 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-8.4L21.5 8" /></svg>
-                      </div>
                     </div>
                     <div className="mt-auto relative z-10 w-full text-center pb-4">
                       <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-2 text-shadow-lg">Fixed Return</h3>
-                      <p className="text-white/60 text-sm tracking-widest uppercase font-bold">Hover to explore</p>
+                      <p className="text-white/60 text-sm tracking-widest uppercase font-bold hidden lg:block">Hover to explore</p>
+                      <button onClick={() => setFlippedCard(flippedCard === 3 ? null : 3)} className="lg:hidden mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Tap to explore</button>
                     </div>
                   </div>
                 </div>
@@ -293,6 +291,7 @@ export default function ModulesPage() {
                         <p><strong className="text-white">Value Add:</strong> Includes complimentary educational course access for each package.</p>
                       </li>
                     </ul>
+                    <button onClick={() => setFlippedCard(null)} className="lg:hidden mt-6 w-full py-3 rounded-full border border-purple-500/30 bg-purple-500/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Go Back</button>
                   </div>
                 </div>
               </div>

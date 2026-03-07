@@ -16,7 +16,7 @@ export function FixedReturnCalculator() {
         setInvestment(Number(e.target.value))
     }
 
-    // Fixed Return (GreenTik) Math
+    // Lock in fund returns Math
     let frDailyRate = 0.002
     let frMaxReturnRate = 1.8
     let tierName = "Pioneer"
@@ -170,7 +170,7 @@ export function FixedReturnCalculator() {
                         </div>
 
                         <p className="text-[9px] text-white/30 leading-relaxed text-center mt-6">
-                            *Fixed returns are specific to the chosen GreenTik package. Time horizons to hit the maximum cap will vary.
+                            *Lock in fund returns are specific to the chosen GreenTik package. Time horizons to hit the maximum cap will vary.
                         </p>
                     </div>
 

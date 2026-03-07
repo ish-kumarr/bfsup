@@ -121,9 +121,9 @@ export const landingPageData = {
         cta: "Explore Module",
       },
       {
-        title: "Fixed Return (GreenTik)",
+        title: "Lock in fund returns",
         subtitle: "Consistent Daily Returns",
-        description: "Choose from our fixed return packages and earn up to 0.5% daily with a maximum return of 220%.",
+        description: "Choose from our Lock in fund returns packages and earn up to 0.5% daily with a maximum return of 220%.",
         cta: "Explore Program",
       },
     ],

@@ -231,7 +231,7 @@ export default function ModulesPage() {
               </div>
             </motion.div>
 
-            {/* Path 3: Fixed Return */}
+            {/* Path 3: Lock in fund returns */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +246,7 @@ export default function ModulesPage() {
                   <div className="absolute inset-0 z-0 bg-[#050505]">
                     <Image
                       src="/modern-financial-trading-office-with-multiple-moni.jpg"
-                      alt="Fixed Return"
+                      alt="Lock in fund returns"
                       fill
                       className="object-cover scale-100 opacity-50 grayscale-0"
                     />
@@ -261,7 +261,7 @@ export default function ModulesPage() {
                       </div>
                     </div>
                     <div className="mt-auto relative z-10 w-full text-center pb-4">
-                      <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-2 text-shadow-lg">Fixed Return</h3>
+                      <h3 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-2 text-shadow-lg">Lock in fund returns</h3>
                       <p className="text-white/60 text-sm tracking-widest uppercase font-bold hidden lg:block">Hover to explore</p>
                       <button onClick={() => setFlippedCard(flippedCard === 3 ? null : 3)} className="lg:hidden mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-white active:scale-95 transition-all">Tap to explore</button>
                     </div>
@@ -432,7 +432,7 @@ export default function ModulesPage() {
 
                 <div className="lg:col-span-6">
                   <h3 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
-                    Fixed Return Packages
+                    Lock in fund returns Packages
                   </h3>
                   <p className="text-white/50 text-lg md:text-xl font-light leading-relaxed mb-8">
                     Invest in Pioneer, Elite, Titan, Zenith, Ascendant, Legend, or Apex packages. Target daily returns from 0.2% to 0.5% up to a total of 180% to 220% maximum return.
@@ -572,7 +572,7 @@ export default function ModulesPage() {
         </div>
       </section>
 
-      {/* Deep Dive 03: Fixed Return */}
+      {/* Deep Dive 03: Lock in fund returns */}
       <section id="module-03" className="py-20 lg:py-32 relative bg-[#050505] border-t border-white/5 overflow-hidden">
         {/* Glow */}
         <div className="absolute top-1/2 left-0 w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-emerald-600/5 rounded-full blur-[100px] lg:blur-[150px] -translate-y-1/2 pointer-events-none" />

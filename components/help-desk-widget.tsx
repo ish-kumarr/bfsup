@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useChat, Message } from "ai/react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Paperclip, Loader2, Sparkles, Image as ImageIcon } from "lucide-react";
 import Image from "next/image";
@@ -108,7 +110,7 @@ export function HelpDeskWidget() {
                             {messages.map((message: Message) => (
                                 <div
                                     key={message.id}
-                                    className={`flex ${message.role === "user" ? "justify-end" : "justify-start"} relative z-10`}
+                                    className={`flex flex-col ${message.role === "user" ? "items-end" : "items-start"} space-y-2 relative z-10`}
                                 >
                                     <div
                                         className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm ${message.role === "user"
@@ -116,14 +118,23 @@ export function HelpDeskWidget() {
                                             : "bg-white/[0.03] border border-white/10 text-white/90 rounded-bl-none font-light"
                                             }`}
                                     >
-                                        {/* Display standard text content */}
+                                        {/* Display message content with Markdown support */}
                                         {message.content && !message.content.startsWith("[Attached an image:") && (
-                                            message.content.split('\n').map((line: string, i: number) => (
-                                                <span key={i}>
-                                                    {line}
-                                                    <br />
-                                                </span>
-                                            ))
+                                            <div className="prose prose-invert prose-sm max-w-none">
+                                                <ReactMarkdown
+                                                    remarkPlugins={[remarkGfm]}
+                                                    components={{
+                                                        p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                                                        ul: ({ children }) => <ul className="list-disc ml-4 mb-2">{children}</ul>,
+                                                        ol: ({ children }) => <ol className="list-decimal ml-4 mb-2">{children}</ol>,
+                                                        li: ({ children }) => <li className="mb-1">{children}</li>,
+                                                        strong: ({ children }) => <strong className="font-bold text-[#FCF6BA]">{children}</strong>,
+                                                        a: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#BF953F] hover:underline">{children}</a>,
+                                                    }}
+                                                >
+                                                    {message.content}
+                                                </ReactMarkdown>
+                                            </div>
                                         )}
 
                                         {/* Display attachments preview */}
@@ -133,11 +144,76 @@ export function HelpDeskWidget() {
                                                 <span className="truncate">{attachment.name}</span>
                                             </div>
                                         ))}
-
                                     </div>
+
+                                    {/* Tool Invocations for Generative UI */}
+                                    {message.toolInvocations?.map((toolInvocation) => {
+                                        const { toolName, toolCallId, state } = toolInvocation;
+
+                                        if (state === 'result') return null;
+
+                                        if (toolName === 'showExperienceChoices') {
+                                            return (
+                                                <div key={toolCallId} className="flex flex-wrap gap-2 mt-2">
+                                                    {['Beginner', 'Experienced'].map((choice) => (
+                                                        <button
+                                                            key={choice}
+                                                            onClick={() => append({ role: 'user', content: choice })}
+                                                            className="px-4 py-2 rounded-full border border-[#BF953F]/30 bg-[#BF953F]/10 text-[#BF953F] text-xs hover:bg-[#BF953F] hover:text-black transition-all font-medium"
+                                                        >
+                                                            {choice}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            );
+                                        }
+
+                                        if (toolName === 'showInterestChoices') {
+                                            return (
+                                                <div key={toolCallId} className="flex flex-wrap gap-2 mt-2">
+                                                    {['Hands-on (I trade)', 'Hands-off (Managed)'].map((choice) => (
+                                                        <button
+                                                            key={choice}
+                                                            onClick={() => append({ role: 'user', content: choice })}
+                                                            className="px-4 py-2 rounded-full border border-[#BF953F]/30 bg-[#BF953F]/10 text-[#BF953F] text-xs hover:bg-[#BF953F] hover:text-black transition-all font-medium"
+                                                        >
+                                                            {choice}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            );
+                                        }
+
+                                        if (toolName === 'recommendModule') {
+                                            const { moduleName, target, description, link } = (toolInvocation as any).args;
+                                            return (
+                                                <motion.div
+                                                    key={toolCallId}
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    className="w-full max-w-[280px] p-4 rounded-2xl bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] border border-[#BF953F]/20 shadow-xl space-y-3"
+                                                >
+                                                    <div className="flex items-center justify-between">
+                                                        <h4 className="text-[#BF953F] font-bold text-sm tracking-tight">{moduleName}</h4>
+                                                        <Sparkles className="w-3.5 h-3.5 text-[#BF953F]/50" />
+                                                    </div>
+                                                    <div className="text-[10px] uppercase tracking-wider text-white/40 font-semibold">{target}</div>
+                                                    <p className="text-xs text-white/70 leading-relaxed font-light">{description}</p>
+                                                    <a
+                                                        href={link}
+                                                        className="block w-full py-2 bg-[#BF953F] hover:bg-[#FCF6BA] text-black text-center text-[10px] font-bold rounded-lg transition-colors shadow-lg"
+                                                    >
+                                                        GET STARTED NOW
+                                                    </a>
+                                                </motion.div>
+                                            );
+                                        }
+
+                                        return null;
+                                    })}
                                 </div>
                             ))}
-                            {isLoading && status === 'submitted' && (
+                            {isLoading && (
                                 <div className="flex justify-start">
                                     <div className="max-w-[80%] rounded-2xl px-4 py-3 bg-white/[0.03] border border-white/10 rounded-bl-none text-white/50 flex gap-1 items-center h-[46px]">
                                         <span className="w-1.5 h-1.5 rounded-full bg-white/40 animate-bounce" style={{ animationDelay: "0ms" }} />

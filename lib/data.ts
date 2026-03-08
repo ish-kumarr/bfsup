@@ -122,8 +122,8 @@ export const landingPageData = {
       },
       {
         title: "Lock in fund returns",
-        subtitle: "Consistent Daily Returns",
-        description: "Choose from our Lock in fund returns packages and earn up to 0.5% daily with a maximum return of 220%.",
+        subtitle: "Targeted Daily Returns",
+        description: "Choose from our Lock in fund returns packages and aim for up to 0.5% daily with a maximum return of 220%.",
         cta: "Explore Program",
       },
     ],

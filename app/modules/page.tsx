@@ -88,7 +88,7 @@ export default function ModulesPage() {
               Three Trading <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] to-[#FCF6BA]">Modules</span>
             </h2>
             <p className="text-white/60 max-w-3xl mx-auto font-light leading-relaxed text-lg">
-              Tap into the <strong className="text-white">massive global financial markets</strong>. Whether you want to trade yourself, have our experts manage it for <strong className="text-[#BF953F]">36%-48% annual targets</strong>, or seek targeted daily yields up to a <strong className="text-purple-400">220% max cap</strong>—we have the perfect structure for your capital.
+              Tap into the <strong className="text-white">massive global financial markets</strong>. Whether you want to trade yourself, have our experts manage it for <strong className="text-[#BF953F]">36%-48% annual targets</strong>, or seek <strong className="text-purple-400">Lock in fund returns</strong>—we have the perfect structure for your capital.
             </p>
           </motion.div>
 
@@ -276,11 +276,11 @@ export default function ModulesPage() {
                     <ul className="space-y-4 text-sm text-white/80">
                       <li className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
-                        <p><strong className="text-white">Daily Targets:</strong> Targeted returns ranging from 0.2% to 0.5% every day (5 days a week).</p>
+                        <p><strong className="text-white">Lock in fund returns:</strong> Predictable returns tailored to your chosen package.</p>
                       </li>
                       <li className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
-                        <p><strong className="text-white">Total Caps:</strong> Maximum returns stretch from 180% to 220% depending on your chosen tier.</p>
+                        <p><strong className="text-white">Total Caps:</strong> Maximum returns based on your selected tier.</p>
                       </li>
                       <li className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-purple-400 mt-0.5 shrink-0" />
@@ -435,17 +435,17 @@ export default function ModulesPage() {
                     Lock in fund returns Packages
                   </h3>
                   <p className="text-white/50 text-lg md:text-xl font-light leading-relaxed mb-8">
-                    Invest in Pioneer, Elite, Titan, Zenith, Ascendant, Legend, or Apex packages. Target daily returns from 0.2% to 0.5% up to a total of 180% to 220% maximum return.
+                    Invest in Pioneer, Elite, Titan, Zenith, Ascendant, Legend, or Apex packages to enjoy Lock in fund returns.
                   </p>
 
                   <div className="grid grid-cols-2 gap-6 pt-8 border-t border-white/5">
                     <div>
-                      <p className="text-white/30 text-[10px] uppercase tracking-wider mb-2 font-bold">Targeted Daily</p>
-                      <p className="text-white/80 font-medium">0.2% - 0.5%</p>
+                      <p className="text-white/30 text-[10px] uppercase tracking-wider mb-2 font-bold">Lock in fund returns</p>
+                      <p className="text-white/80 font-medium">Tier Based</p>
                     </div>
                     <div>
-                      <p className="text-white/30 text-[10px] uppercase tracking-wider mb-2 font-bold">Max Return</p>
-                      <p className="text-white/80 font-medium">Up to 220%</p>
+                      <p className="text-white/30 text-[10px] uppercase tracking-wider mb-2 font-bold">Max Cap</p>
+                      <p className="text-white/80 font-medium">Tier Based</p>
                     </div>
                   </div>
                 </div>
@@ -584,10 +584,10 @@ export default function ModulesPage() {
               <span className="text-[10px] uppercase tracking-widest text-emerald-300 font-bold">Module 03 Breakdown</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-6 lg:mb-8 leading-[0.9] whitespace-nowrap">
-              Targeted <br className="hidden lg:block" />Return
+              Lock in fund <br className="hidden lg:block" />returns
             </h2>
             <p className="text-white/50 text-lg lg:text-xl font-light leading-relaxed mb-8 lg:mb-10 max-w-2xl mx-auto">
-              Structured compounding logic. GreenTik packages aim for targeted daily yields up to an impressive absolute maximum return cap.
+              Structured compounding logic. GreenTik packages offer Lock in fund returns tailored to your needs.
             </p>
             <ul className="grid md:grid-cols-3 gap-6 lg:gap-8 text-center max-w-4xl mx-auto">
               <li className="flex flex-col items-center text-center gap-4">
@@ -595,8 +595,8 @@ export default function ModulesPage() {
                   <Check className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-lg mb-2">Targeted 0.2% to 0.5% Daily</h4>
-                  <p className="text-white/40 text-sm leading-relaxed">Targeted daily returns (5 days a week) scaled to your tier level.</p>
+                  <h4 className="text-white font-bold text-lg mb-2">Lock in fund returns</h4>
+                  <p className="text-white/40 text-sm leading-relaxed">Returns scaled to your tier level.</p>
                 </div>
               </li>
               <li className="flex flex-col items-center text-center gap-4">
@@ -605,7 +605,7 @@ export default function ModulesPage() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-lg mb-2">Up to 220% Max Return</h4>
-                  <p className="text-white/40 text-sm leading-relaxed">Your targeted daily rate continues to accumulate until hitting the tier's hard cap.</p>
+                  <p className="text-white/40 text-sm leading-relaxed">Your return rate continues to accumulate until hitting the tier's hard cap.</p>
                 </div>
               </li>
               <li className="flex flex-col items-center text-center gap-4">
@@ -646,7 +646,7 @@ export default function ModulesPage() {
                   <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-[#BF953F]/20 text-[#BF953F] px-2 py-0.5 rounded-full whitespace-nowrap lg:block hidden">Recommended</span>
                   Profit Sharing
                 </div>
-                <div className="text-center font-bold text-white/50 uppercase tracking-widest text-xs">Targeted Return</div>
+                <div className="text-center font-bold text-white/50 uppercase tracking-widest text-xs">Lock in fund returns</div>
               </div>
 
               {/* Feature Rows */}
@@ -657,7 +657,7 @@ export default function ModulesPage() {
                   { feature: "Expert Team Execution", levels: [false, true, true] },
                   { feature: "Full Profit & Loss Ownership", levels: [true, false, false] },
                   { feature: "50:50 Profit & Loss Sharing", levels: [false, true, false] },
-                  { feature: "Targeted Daily Returns (0.2% - 0.5%)", levels: [false, false, true] },
+                  { feature: "Lock in fund returns", levels: [false, false, true] },
                   { feature: "Education & Mentoring Support", levels: [true, false, false] },
                   { feature: "Maximum Return Capped", levels: [false, false, true] },
                   { feature: "Algorithm/Copy Trading Options", levels: [true, false, false] },
@@ -695,7 +695,7 @@ export default function ModulesPage() {
             {[
               { q: "Do I need prior experience for Self Trading?", a: "Not at all. If you lack trading knowledge, the company provides support services including education, counseling, copy trading, and algorithmic trading." },
               { q: "What is the withdrawal condition for Profit Sharing?", a: "You can withdraw funds at any time, but a minimum 40-day notice period is required for withdrawal under the Profit Sharing module." },
-              { q: "What returns can I expect from Lock in fund returns (GreenTik)?", a: "Our packages range from $100 up to $10,000. We target 0.2% to 0.5% daily returns (5 days a week) until you hit the maximum return of 180% to 220%." },
+              { q: "What returns can I expect from Lock in fund returns (GreenTik)?", a: "Our packages range from $100 up to $10,000. You will receive Lock in fund returns tailored to your selected tier." },
               { q: "Are the trading accounts in my name?", a: "Yes, for the Self Trading and Profit Sharing modules, the trading account and KYC will be registered strictly in your own name." },
             ].map((faq, i) => (
               <details key={i} className="group overflow-hidden rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#BF953F]/30 transition-colors duration-500 open:bg-white/[0.04] open:border-[#BF953F]/20">

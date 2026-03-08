@@ -98,6 +98,7 @@ export function FixedReturnCalculator() {
                                     textClassName="text-emerald-300"
                                 />
                             </div>
+                            {/* Hidden explicit percentage values to avoid promising 
                             <div className="flex justify-between items-center">
                                 <span className="text-white/50 text-xs tracking-wide">Daily Rate</span>
                                 <span className="text-white font-black text-sm"><NumberFlow value={frDailyRate * 100} format={{ minimumFractionDigits: 1, maximumFractionDigits: 1 }} />%</span>
@@ -106,6 +107,7 @@ export function FixedReturnCalculator() {
                                 <span className="text-white/50 text-xs tracking-wide">Max Return Cap</span>
                                 <span className="text-white font-black text-sm"><NumberFlow value={frMaxReturnRate * 100} format={{ maximumFractionDigits: 0 }} />%</span>
                             </div>
+                            */}
                         </div>
                     </div>
                 </div>

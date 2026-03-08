@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   const { messages } = await req.json();
 
   const result = await streamText({
-    model: google('gemini-3-flash-preview'),
+    model: google('models/gemini-2.5-flash'),
     messages,
     system: `You are Aura, the official AI Help Desk Assistant for Brightfolio Solutions.
 You are professional, concise, encouraging, and highly knowledgeable about trading and the financial markets.

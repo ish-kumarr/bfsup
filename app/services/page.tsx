@@ -69,25 +69,21 @@ const services = [
     image: "/modern-financial-trading-office-with-multiple-moni.jpg",
   },
   {
-    id: "forex",
+    id: "global_markets",
     icon: BookOpen,
-    title: "Forex Trading Fundamentals",
-    subtitle: "Global Currency Markets Course",
-    shortDesc: "Master forex trading with professional analysis techniques.",
+    title: "Global Markets Trading Fundamentals",
+    shortDesc: "Master trading with professional analysis techniques.",
     fullDesc:
-      "Learn to trade the world's largest financial market. Our Forex Trading course teaches technical analysis, economic indicators, and trading strategies for major currency pairs with proven risk management.",
+      "Learn to trade the world's largest financial markets. Our Trading course teaches technical analysis, economic indicators, and trading strategies for major markets with proven risk management.",
     features: [
-      "Currency pair analysis",
-      "Economic indicators for forex",
-      "Technical patterns in forex",
-      "Leverage management safely",
-      "Geopolitical impact on forex",
-      "Trading major & exotic pairs",
+      "Economic indicators for global markets",
+      "Technical patterns in global markets",
+      "Live trading scenarios",
+      "Geopolitical impact on global markets",
     ],
     stats: [
-      { value: "2000+", label: "Forex Traders Trained" },
-      { value: "28", label: "Currency Pairs Taught" },
-      { value: "6", label: "Week Intensive Course" },
+      { value: "10+", label: "Expert Modules" },
+      { value: "2000+", label: "Traders Trained" },
     ],
     image: "/professional-financial-trading-team-meeting-in-mod.jpg",
   },
@@ -233,7 +229,7 @@ export default function ServicesPage() {
               Comprehensive Trading Education
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              From stocks to crypto, forex to mutual funds — we offer a complete suite of trading courses designed
+              From stocks to crypto, global markets to mutual funds — we offer a complete suite of trading courses designed
               to build independent market skills.
             </p>
           </motion.div>
@@ -249,11 +245,10 @@ export default function ServicesPage() {
               <button
                 key={service.id}
                 onClick={() => setActiveService(service.id)}
-                className={`flex items-center gap-3 px-6 py-4 rounded-xl border transition-all duration-300 ${
-                  activeService === service.id
+                className={`flex items-center gap-3 px-6 py-4 rounded-xl border transition-all duration-300 ${activeService === service.id
                     ? "gold-gradient-bg text-[#050505] border-transparent"
                     : "bg-[#0a0a0a] border-yellow-500/20 text-white hover:border-yellow-500/40"
-                }`}
+                  }`}
               >
                 <service.icon className="w-5 h-5" />
                 <span className="font-medium">{service.title}</span>
@@ -384,11 +379,10 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className={`relative p-8 rounded-2xl border transition-all duration-300 ${
-                  plan.recommended
+                className={`relative p-8 rounded-2xl border transition-all duration-300 ${plan.recommended
                     ? "bg-gradient-to-b from-[#BF953F]/10 to-[#0a0a0a] border-[#BF953F]/40"
                     : "bg-[#0a0a0a] border-yellow-500/10 hover:border-yellow-500/30"
-                }`}
+                  }`}
               >
                 {plan.recommended && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 gold-gradient-bg rounded-full text-[#050505] text-sm font-bold">
@@ -411,11 +405,10 @@ export default function ServicesPage() {
 
                 <Link
                   href="/onboarding"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.recommended
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${plan.recommended
                       ? "gold-gradient-bg text-[#050505] hover:gold-glow"
                       : "border border-[#BF953F]/40 text-white hover:bg-[#BF953F]/10"
-                  }`}
+                    }`}
                 >
                   Select Plan
                 </Link>
@@ -569,9 +562,8 @@ export default function ServicesPage() {
                 >
                   <span className="font-medium text-white pr-4">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#BF953F] flex-shrink-0 transition-transform duration-300 ${
-                      openFaq === index ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 text-[#BF953F] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 <AnimatePresence>

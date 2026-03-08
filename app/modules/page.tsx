@@ -88,7 +88,7 @@ export default function ModulesPage() {
               Three Trading <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] to-[#FCF6BA]">Modules</span>
             </h2>
             <p className="text-white/60 max-w-3xl mx-auto font-light leading-relaxed text-lg">
-              Tap into the <strong className="text-white">$9.6 Trillion daily Forex market</strong>. Whether you want to trade yourself, have our experts manage it for <strong className="text-[#BF953F]">36%-48% annual targets</strong>, or seek consistent daily yields up to a <strong className="text-purple-400">220% max cap</strong>—we have the perfect structure for your capital.
+              Tap into the <strong className="text-white">massive global financial markets</strong>. Whether you want to trade yourself, have our experts manage it for <strong className="text-[#BF953F]">36%-48% annual targets</strong>, or seek consistent daily yields up to a <strong className="text-purple-400">220% max cap</strong>—we have the perfect structure for your capital.
             </p>
           </motion.div>
 

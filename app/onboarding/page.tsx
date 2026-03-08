@@ -78,7 +78,7 @@ const investmentAmounts = [
 const services = [
   { value: "stock-trading", label: "Equities", icon: "chart" },
   { value: "crypto", label: "Digital Assets", icon: "bitcoin" },
-  { value: "forex", label: "Global Forex", icon: "globe" },
+  { value: "global_markets", label: "Global Markets", icon: "globe" },
   { value: "options", label: "Derivatives", icon: "layers" },
 ]
 

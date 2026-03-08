@@ -278,7 +278,7 @@ export default function AboutPage() {
             {[
               { value: "6+", label: "Years of Excellence" },
               { value: "25K+", label: "Active Students" },
-              { value: "10K+", label: "Forex Traders Trained" },
+              { value: "10K+", label: "Traders Trained" },
               { value: "15+", label: "States Covered" },
             ].map((stat, i) => (
               <SpotlightCard key={stat.label} className="p-8 md:p-10 text-center flex flex-col justify-center">

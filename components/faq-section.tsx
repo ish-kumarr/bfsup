@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "What markets do you teach?",
-    answer: "While our core focus is on the Forex and Crypto markets due to their liquidity and structure, the price action and technical analysis strategies we teach are universally applicable to Stocks and Commodities as well.",
+    answer: "While our core focus is on the global markets due to their liquidity and structure, the price action and technical analysis strategies we teach are universally applicable to Stocks and Commodities as well.",
   },
   {
     question: "How long does it take to see results?",

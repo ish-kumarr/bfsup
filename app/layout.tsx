@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ProgressiveBlur } from "@/components/progressive-blur"
-import { SmoothScrolling } from "@/components/smooth-scrolling"
+
 import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"] })
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Brightfolio Solutions",
   },
   description:
-    "Brightfolio Solutions is India's leading trading education platform. Learn stock trading, cryptocurrency, forex & investment strategies from expert mentors. Join 10,000+ successful students.",
+    "Brightfolio Solutions is India's leading trading education platform. Learn stock trading, cryptocurrency, global markets & investment strategies from expert mentors. Join 10,000+ successful students.",
   keywords: [
     "Brightfolio",
     "BrightFolio",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "trading education",
     "stock trading course",
     "cryptocurrency trading",
-    "forex trading course",
+    "global markets trading course",
     "trading academy India",
     "learn trading",
     "investment education",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "Brightfolio Solutions",
     title: "Brightfolio Solutions | Premier Trading Education & Certification Platform",
     description:
-      "Master the art of trading with India's top trading education platform. Expert-led courses in stocks, crypto, forex & more. Join 10,000+ successful students.",
+      "Master the art of trading with India's top trading education platform. Expert-led courses in stocks, crypto, global markets & more. Join 10,000+ successful students.",
     images: [
       {
         url: "/og-image.jpg",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Brightfolio Solutions | Trading Education Platform",
     description:
-      "Learn trading from experts. Stock, crypto & forex courses. Join 10,000+ successful students at India's premier trading academy.",
+      "Learn trading from experts. Stock, crypto & global markets courses. Join 10,000+ successful students at India's premier trading academy.",
     images: ["/og-image.jpg"],
     creator: "@brightfolio",
   },
@@ -119,7 +119,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased bg-[#0A0A0A] overflow-x-hidden`} suppressHydrationWarning>
-        <SmoothScrolling />
         <ProgressiveBlur />
         {children}
         <Analytics />

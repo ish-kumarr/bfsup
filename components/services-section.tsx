@@ -124,7 +124,7 @@ export function ServicesSection() {
             </div>
 
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8">
-              Our Forex <br className="hidden sm:block" />
+              Our Trading <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#BF953F]">Mastery Program</span>
             </h2>
 

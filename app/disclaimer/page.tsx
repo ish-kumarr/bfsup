@@ -25,7 +25,7 @@ export default function DisclaimerPage() {
       icon: AlertTriangle,
       title: "Risk Disclosure",
       content: [
-        "Trading in stocks, cryptocurrencies, forex, and other financial instruments involves substantial risk of loss and is not suitable for all investors. The high degree of leverage that is often obtainable in trading can work against you as well as for you.",
+        "Trading in stocks, cryptocurrencies, and other financial instruments involves substantial risk of loss and is not suitable for all investors. The high degree of leverage that is often obtainable in trading can work against you as well as for you.",
         "Past performance is not indicative of future results. Historical returns, expected returns, and probability projections are provided for educational purposes and may not reflect actual future performance.",
         "You should carefully consider whether trading is suitable for you in light of your financial condition. You should be aware of all the risks associated with trading and seek advice from an independent financial advisor if you have any doubts."
       ]

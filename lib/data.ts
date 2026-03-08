@@ -5,9 +5,9 @@ export const landingPageData = {
     targetMarket: "Aspiring & Active Traders in India & Globally",
   },
   heroSection: {
-    tagline: "India's Leading Forex Academy",
+    tagline: "India's Leading Trading Academy",
     greeting: "Welcome to Brightfolio",
-    headline: "Master Forex Trading with Live Mentorship",
+    headline: "Master Trading with Live Mentorship",
     subheadline:
       "Structured Technical Analysis & Risk Management for Beginners and Serious Traders.",
     ctaButton: {
@@ -24,7 +24,7 @@ export const landingPageData = {
     heading: "Empowering Traders Through Education",
     subHeading: "About Us",
     description: [
-      "Brightfolio Solutions is a structured Forex trading education platform focused on practical market learning.",
+      "Brightfolio Solutions is a structured trading education platform focused on practical market learning.",
       "Our goal is to help traders understand price action, risk management, and disciplined execution through step-by-step training.",
       "We do not provide investment advice or profit guarantees. Our programs are strictly educational and designed to build independent trading skills."
     ],
@@ -33,15 +33,15 @@ export const landingPageData = {
   },
   servicesSection: {
     tagline: "What We Teach",
-    heading: "Our Forex Mastery Program",
+    heading: "Our Trading Mastery Program",
     subHeading: "Our Course",
     description:
-      "Our Forex Mastery Program covers: Market Structure & Price Action, Technical Indicators & Chart Reading, Risk Management Framework, Trading Psychology, and Live Market Practice Sessions.",
+      "Our Trading Mastery Program covers: Market Structure & Price Action, Technical Indicators & Chart Reading, Risk Management Framework, Trading Psychology, and Live Market Practice Sessions.",
     items: [
       {
-        title: "Forex Mastery Program",
+        title: "Trading Mastery Program",
         description:
-          "Master the essentials of Forex trading with our comprehensive curriculum. We focus on building your skills through practical market execution and disciplined risk management.",
+          "Master the essentials of trading with our comprehensive curriculum. We focus on building your skills through practical market execution and disciplined risk management.",
         note: "Suitable for beginners and experienced traders",
       }
     ],
@@ -81,7 +81,7 @@ export const landingPageData = {
   },
   statsSection: {
     tagline: "Our Market",
-    heading: "The Power of Forex",
+    heading: "The Power of Trading",
     items: [
       {
         label: "Daily Volume",

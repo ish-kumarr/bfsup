@@ -75,7 +75,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-[1.1]"
           >
-            <span className="text-white block mb-2">Master Forex Trading</span>
+            <span className="text-white block mb-2">Master Trading</span>
             <span className="gold-gradient-text">with Live Mentorship</span>
           </motion.h1>
 

@@ -20,8 +20,8 @@ export function RiskDisclaimerSection() {
           </div>
           <h2 className="text-2xl font-bold text-[#BF953F] mb-6 tracking-wide uppercase">Risk Disclaimer:</h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Forex and financial markets involve a high level of risk and may not be suitable for all investors. 
-            Brightfolio Solutions provides educational services only. We do not manage funds or provide 
+            Financial markets involve a high level of risk and may not be suitable for all investors.
+            Brightfolio Solutions provides educational services only. We do not manage funds or provide
             investment advisory services. Past performance does not guarantee future results.
           </p>
         </motion.div>

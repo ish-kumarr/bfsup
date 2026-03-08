@@ -169,7 +169,7 @@ export function HelpDeskWidget() {
                                         onChange={handleFileChange}
                                     />
                                     <input
-                                        value={input}
+                                        value={input || ""}
                                         onChange={handleInputChange}
                                         placeholder="Ask Aura anything..."
                                         className="flex-1 bg-transparent text-white text-sm focus:outline-none px-2 py-2 placeholder:text-white/30"
@@ -178,7 +178,7 @@ export function HelpDeskWidget() {
                                 </div>
                                 <button
                                     type="submit"
-                                    disabled={isLoading || (!input.trim() && !fileInputRef.current?.value)}
+                                    disabled={isLoading || (!input?.trim() && !fileInputRef.current?.value)}
                                     className="w-12 h-12 bg-[#BF953F] hover:bg-[#FCF6BA] text-black rounded-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-colors shrink-0 shadow-[0_0_15px_rgba(191,149,63,0.3)]"
                                 >
                                     {isLoading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Send className="w-5 h-5 ml-1" />}

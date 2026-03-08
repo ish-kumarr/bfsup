@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useChat, Message } from "@ai-sdk/react";
+import { useChat, Message } from "ai/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Paperclip, Loader2, Sparkles, Image as ImageIcon } from "lucide-react";
 import Image from "next/image";

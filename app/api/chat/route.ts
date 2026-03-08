@@ -31,5 +31,5 @@ Guidelines:
 - If a user uploads an image (like a chart or a screenshot), analyze it briefly and relate it to trading education.`,
   });
 
-  return result.toDataStreamResponse();
+  return result.toAIStreamResponse();
 }

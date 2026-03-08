@@ -478,7 +478,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section (Hidden currently) */}
+      {/* 
       <section className="py-24 md:py-40 relative">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <motion.div
@@ -525,6 +526,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Why Choose Us Section */}
       <section className="py-24 md:py-40 relative border-t border-white/5">

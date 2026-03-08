@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ProgressiveBlur } from "@/components/progressive-blur"
+import { HelpDeskWidget } from "@/components/help-desk-widget"
 
 import "./globals.css"
 
@@ -121,6 +122,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased bg-[#0A0A0A] overflow-x-hidden`} suppressHydrationWarning>
         <ProgressiveBlur />
         {children}
+        <HelpDeskWidget />
         <Analytics />
       </body>
     </html>

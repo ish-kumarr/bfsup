@@ -5,12 +5,12 @@ import { google } from '@ai-sdk/google';
 export const maxDuration = 30;
 
 export async function POST(req: Request) {
-    const { messages } = await req.json();
+  const { messages } = await req.json();
 
-    const result = streamText({
-        model: google('gemini-3-flash-preview'),
-        messages,
-        system: `You are Aura, the official AI Help Desk Assistant for Brightfolio Solutions.
+  const result = await streamText({
+    model: google('gemini-3-flash-preview'),
+    messages,
+    system: `You are Aura, the official AI Help Desk Assistant for Brightfolio Solutions.
 You are professional, concise, encouraging, and highly knowledgeable about trading and the financial markets.
 Your tone is premium, matching Brightfolio's Aceternity-inspired dark mode aesthetic (gold and emerald accents).
 
@@ -29,7 +29,7 @@ Guidelines:
 - Offer to connect them to human support (call +91 9588695021) if they need complex account-specific help.
 - Emphasize Brightfolio's core values: Trust, Transparency, Innovation, and Student-First approach.
 - If a user uploads an image (like a chart or a screenshot), analyze it briefly and relate it to trading education.`,
-    });
+  });
 
-    return result.toTextStreamResponse ? result.toTextStreamResponse() : (result as any).toDataStreamResponse();
+  return result.toDataStreamResponse();
 }

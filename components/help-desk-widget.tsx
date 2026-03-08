@@ -166,7 +166,27 @@ export function HelpDeskWidget() {
                                         accept="image/*"
                                         className="hidden"
                                         ref={fileInputRef}
-                                        onChange={handleFileChange}
+                                        onChange={async (e) => {
+                                            if (e.target.files && e.target.files.length > 0) {
+                                                const file = e.target.files[0];
+                                                const reader = new FileReader();
+                                                reader.readAsDataURL(file);
+                                                reader.onload = () => {
+                                                    append({
+                                                        role: "user",
+                                                        content: `[Attached an image: ${file.name}]`,
+                                                        experimental_attachments: [
+                                                            {
+                                                                name: file.name,
+                                                                contentType: file.type,
+                                                                url: reader.result as string
+                                                            }
+                                                        ]
+                                                    });
+                                                };
+                                                if (fileInputRef.current) fileInputRef.current.value = "";
+                                            }
+                                        }}
                                     />
                                     <input
                                         value={input || ""}
